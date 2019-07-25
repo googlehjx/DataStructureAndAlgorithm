@@ -1,6 +1,6 @@
 #include <iostream>
 #include <list>
-#include "ListIterator.h"
+#include "List.h"
 
 using namespace std;
 int main()
@@ -12,35 +12,27 @@ int main()
 	l.Insert(2);
 	l.Insert(3);
 	l.Invert();
+	l.show();
 	
-	ListIterator<int> it(l);
-	if (it.NotNull())
+
+
+	cout << "STL链表和迭代器：" << endl;
+
+	std::list<int> listi;
+	listi.push_front(1);
+	listi.push_front(2);
+	listi.push_front(4);
+	listi.push_front(8);
+	listi.push_front(16);
+
+	std::list<int>::iterator it = listi.begin(); //返回一个迭代器指向链表中的第一个数据
+	while (it != listi.end())
 	{
-		cout << *it.First();
-		while (it.NextNotNull())
-			cout << " -> " << *it.Next();
-		cout << endl;
+		cout << *it << " -> ";
+		++it;
 	}
+	cout << endl;
 
+	
 	return 0;
-
-	//cout << "STL链表和迭代器：" << endl;
-
-	//std::list<int> listi;
-	//listi.push_front(1);
-	//listi.push_front(2);
-	//listi.push_front(4);
-	//listi.push_front(8);
-	//listi.push_front(16);
-
-	//std::list<int>::iterator it = listi.begin(); //返回一个迭代器指向链表中的第一个数据
-	//while (it != listi.end())
-	//{
-	//	cout << *it << " -> ";
-	//	++it;
-	//}
-	//cout << endl;
-
-	//
-	//return 0;
 }
