@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-	cout << "单向循环链表测试：" << endl;
+	cout << "链表迭代器测试：" << endl;
 
 
 

@@ -2,10 +2,12 @@
 #define _链表_H
 
 template <class T> class List;
+template <class T> class ListIterator;
 template <class T>
 class ListNode
 {
 	friend class List<T>;
+	friend class ListIterator<T>;
 
 private:
 	T data;
@@ -13,21 +15,13 @@ private:
 	ListNode(T);  //私有构造函数，友员 List调用
 };
 
-template<class T>
-ListNode<T>::ListNode(T item)
-{
-	data = item;
-	link = 0;
-}
 
 template <class T>
 class List
 {
+	friend class ListIterator<T>;
 public:
-	List()
-	{
-		first = 0;
-	}
+	List(){	first = 0;}
 	void Insert(T);
 	void Delete(T);
 	void Invert();
@@ -37,6 +31,58 @@ private:
 	ListNode<T>* first;
 
 };
+
+template <class T>
+class ListIterator
+{
+public:
+	ListIterator(const List<T>& ls) :lst(ls), current(ls.first) {};
+	bool NotNull();
+	bool NextNotNull();
+	T* First(); //返回链表的第一个节点的指针
+	T* Next(); //返回当前节点的下一个节点的指针
+private:
+	const List<T>& lst;
+	ListNode<T>* current;
+};
+
+template <class T>
+bool ListIterator<T>::NotNull()
+{
+	if (current) return true;
+	else return false;
+}
+
+template <class T>
+bool ListIterator<T>::NextNotNull()
+{
+	if (current && current->link) return true;
+	else return false;
+}
+
+template <class T>
+T* ListIterator<T>::First()
+{
+	if (lst.first) return &lst.first->data;
+	else return 0;
+}
+
+template <class T>
+T* ListIterator<T>::Next()
+{
+	if (current)
+	{
+		current = current->link;
+		return &(current->data);
+	}
+	else return 0;
+}
+template<class T>
+ListNode<T>::ListNode(T item)
+{
+	data = item;
+	link = 0;
+}
 
 template <class T>
 void List<T>::Insert(T item)
