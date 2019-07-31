@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2-3树", "2-3树\2-3树.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVL树", "AVL树\AVL树.vcxproj", "{A3F303F0-0794-4277-817E-CAE4FCBF33C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "红黑树", "红黑树\红黑树.vcxproj", "{BB311244-00D9-4023-8846-00334A4E702C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{A3F303F0-0794-4277-817E-CAE4FCBF33C1}.Release|x64.Build.0 = Release|x64
 		{A3F303F0-0794-4277-817E-CAE4FCBF33C1}.Release|x86.ActiveCfg = Release|Win32
 		{A3F303F0-0794-4277-817E-CAE4FCBF33C1}.Release|x86.Build.0 = Release|Win32
+		{BB311244-00D9-4023-8846-00334A4E702C}.Debug|x64.ActiveCfg = Debug|x64
+		{BB311244-00D9-4023-8846-00334A4E702C}.Debug|x64.Build.0 = Debug|x64
+		{BB311244-00D9-4023-8846-00334A4E702C}.Debug|x86.ActiveCfg = Debug|Win32
+		{BB311244-00D9-4023-8846-00334A4E702C}.Debug|x86.Build.0 = Debug|Win32
+		{BB311244-00D9-4023-8846-00334A4E702C}.Release|x64.ActiveCfg = Release|x64
+		{BB311244-00D9-4023-8846-00334A4E702C}.Release|x64.Build.0 = Release|x64
+		{BB311244-00D9-4023-8846-00334A4E702C}.Release|x86.ActiveCfg = Release|Win32
+		{BB311244-00D9-4023-8846-00334A4E702C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

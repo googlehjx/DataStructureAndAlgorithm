@@ -96,9 +96,9 @@ class Tree
 public:
 	TreeNode<T>* get(Element<T> item);
 	void Insert(Element<T> itme);
-	void Insert(TreeNode<T>* node, Element<T> item);
-	void addNode(int);
-	void isEmpty();
+	//void Insert(TreeNode<T>* node, Element<T> item);
+	//void addNode(int);
+	//void isEmpty();
 	void spliteNode(TreeNode<T>*);
 	void _spliteNode(TreeNode<T>* node, TreeNode<T>* p);
 	TreeNode<T>* _newTree(TreeNode<T>*);
@@ -106,7 +106,7 @@ public:
 	void InOrder(TreeNode<T>* current);
 private:
 	TreeNode<T>* findPlace(TreeNode<T>*, const Element<T>&);
-	void display();
+	//void display();
 	TreeNode<T> *root = nullptr;
 };
 
